@@ -22,8 +22,8 @@ void setup() {
 void loop(){
 
   /////Serial Read///////////////////////////////////
-  while (Serial.available() == 0);
-  int val = Serial.read() - '0';
+  // while (Serial.available() == 0);
+  //int val = Serial.read() - '0';
 
   /////Humidity Input - from http://arduino.cc/forum/index.php/topic,19961.0.html#11///////////////////////////////////
   humidityValue = analogRead(sensorPinHumid);
@@ -73,7 +73,7 @@ void loop(){
   //convert to Fahrenheight
   float temperatureF = ((temperatureC * 9.0 / 5.0) + 32.0) * -1;
 
-  Serial.println(temperatureF);
+  //Serial.println(temperatureF);
 
   /////Temp Output
   if (temperatureF <= 45) 
@@ -87,22 +87,11 @@ void loop(){
   }
 
 
-  /////Tissues Output///////////////////////////////////
-  if (val == 3)
-  {
-    Serial.println("T"); //tissues
-  }
-
-  if (val == 8)
-  {
-    Serial.println("t"); //no tissues
-  }
-
-
 
   Serial.flush();
 
 }
+
 
 
 

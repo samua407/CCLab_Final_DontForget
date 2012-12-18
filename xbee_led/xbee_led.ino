@@ -1,9 +1,9 @@
 //LED Pins
 int ledUmbrella =  11;      // the number of the LED pin
-int ledSunglasses = 10;      // the number of the LED pin
-int ledMittens =  9;      // the number of the LED pin
-int ledTissues =  8;      // the number of the LED pin
-int ledPower =  7;      // the number of the LED pin
+int ledSunglasses = 9;      // the number of the LED pin
+int ledMittens =  7;      // the number of the LED pin
+//int ledTissues =  8;      // the number of the LED pin
+int ledPower =  13;      // the number of the LED pin
 
 
 void setup() {
@@ -13,7 +13,7 @@ void setup() {
   pinMode(ledUmbrella, OUTPUT);      
   pinMode(ledSunglasses, OUTPUT);      
   pinMode(ledMittens, OUTPUT);      
-  pinMode(ledTissues, OUTPUT);      
+  //pinMode(ledTissues, OUTPUT);      
   pinMode(ledPower, OUTPUT);      
 
 }
@@ -23,7 +23,7 @@ void loop(){
     char getData = Serial.read();  //if yes, read it
 
     digitalWrite(ledPower, HIGH);
-    
+
     if(getData == 'U'){
       digitalWrite(ledUmbrella, HIGH);
     }
@@ -45,13 +45,14 @@ void loop(){
       digitalWrite(ledMittens, LOW);
     }
 
-    if(getData == 'T'){
-      digitalWrite(ledTissues, HIGH);
-    }
-    else if(getData == 't'){
-      digitalWrite(ledTissues, LOW);
-    }
+    // if(getData == 'T'){
+    //   digitalWrite(ledTissues, HIGH);
+    // }
+    // else if(getData == 't'){
+    //   digitalWrite(ledTissues, LOW);
+    // }
   }
 }
+
 
 
