@@ -78,12 +78,12 @@ void loop(){
   /////Temp Output
   if (temperatureF <= 45) 
   {
-    Serial.println("M"); //need mittens
+    Serial.println("m"); //need mittens
   }
 
   if (temperatureF >= 46)
   {
-    Serial.println("m"); //no mittens
+    Serial.println("M"); //no mittens
   }
 
 
